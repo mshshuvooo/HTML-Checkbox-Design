@@ -1,0 +1,39 @@
+
+.checkbox input[type=checkbox] +label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+.checkbox input[type="checkbox"] + label:before {
+  content: "\2714";
+  border: 1px solid #333;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 10px;
+  color: transparent;
+  transition: .3s;
+}
+.checkbox input[type="checkbox"]:checked + label::before {
+  background-color: #57A700;
+  color: #fff;
+  border-color: #57A700;
+}
+.checkbox input[type=checkbox] +label:active:before {
+  transform: scale(0);
+}
+.checkbox input[type=checkbox]:disabled +label:before {
+  border-color: #aaa;
+  transform: scale(1);
+}
+
+.checkbox input[type=checkbox]:checked:disabled +label:before {
+  background-color: #086100;
+  border-color: #086100;
+  color: #ddd;
+}
